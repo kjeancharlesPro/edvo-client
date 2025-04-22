@@ -1,0 +1,252 @@
+<nav class="navbar navbar-expand-lg bg-primary">
+  <div
+    class="container-fluid d-flex justify-content-center justify-content-lg-between"
+    style="color: #ffffff"
+  >
+    <span class="d-none d-lg-block text-nowrap"
+      >Addiction - Prévention - Accompagnement - Précarité</span
+    >
+    <ul class="nav flex-nowrap">
+      <li class="nav-item">
+        <a
+          class="nav-link link-light active d-flex"
+          aria-current="Contact page"
+          routerLink="/contact"
+        >
+          <i class="bi bi-person-lines-fill me-1"></i>
+          <span class="d-none d-xl-block">Contact</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link link-light d-flex"
+          aria-current="Newsletter page"
+          routerLink="/newsletter"
+        >
+          <i class="bi bi-envelope-paper me-1"></i>
+          <span class="d-none d-xl-block">Newsletter</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link link-light d-flex"
+          href="https://www.instagram.com/e_d_v_o/"
+          target="_blank"
+        >
+          <i class="bi bi-instagram me-1"></i>
+          <span class="d-none d-xl-block">Instagram</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link link-light d-flex"
+          href="https://x.com/edvo_addictions?s=09"
+          target="_blank"
+        >
+          <i class="bi bi-twitter me-1"></i>
+          <span class="d-none d-xl-block">Twitter</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link link-light d-flex"
+          href="https://www.facebook.com/edvo.addictions"
+          target="_blank"
+        >
+          <i class="bi bi-facebook me-1"></i>
+          <span class="d-none d-xl-block">Facebook</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">
+      <img
+        [src]="logoUrl"
+        [alt]="logoAlt"
+        width="100"
+        height="50"
+        class="d-inline-block align-text-top"
+      />
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/">Accueil</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            À propos
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/en-bref">En bref</a></li>
+            <li><a class="dropdown-item" routerLink="/missions">Mission</a></li>
+            <li>
+              <a class="dropdown-item" routerLink="/historique">Historique</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/parcours-de-soin">
+                Parcours de soin
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/temoignages">Témoignages</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/financement">Financement</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Nos actions
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" routerLink="/hotel-social">
+                Hôtel social
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/maison-relais">
+                Maison relais
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/epicerie-sociales">
+                Épicerie sociales
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="/appartements-therapeutiques"
+              >
+                Appartements thérapetiques
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/groupe-entraide-famille">
+                Groupe entraide famille
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            routerLink="/prévention-&-formation"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Prévention & Formation</a
+          >
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" routerLink="/scolaires">Scolaires</a>
+            </li>
+            <li><a class="dropdown-item" routerLink="/parents">Parents</a></li>
+            <li>
+              <a class="dropdown-item" routerLink="/entreprises">Entreprises</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/formations-acteurs-relais">
+                Formations acteurs-relais
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            routerLink="/nous-soutenir"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Nous soutenir
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" routerLink="/faire-un-leg">
+                Faire un leg
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/don-adherent">
+                Faire un don / Devenir adhérent
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="/status-reglement-organigramme"
+              >
+                Status, Reglement interieur et Organigramme
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/devenir-benevole">
+                Devenir bénévole
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="/devenir-mecene-de-competences"
+              >
+                Devenir mécène de compétences
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/actualites">Actualités</a>
+        </li>
+      </ul>
+
+      <form class="d-flex" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Rechercher un article"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-secondary" type="submit">
+          Rechercher
+        </button>
+      </form>
+    </div>
+  </div>
+</nav>
