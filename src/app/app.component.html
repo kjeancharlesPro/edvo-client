@@ -1,5 +1,10 @@
 <app-header></app-header>
 <div class="mb-5">
+  @if(showScrollUpButton){
+  <button class="scroll-up-btn btn btn-primary" (click)="scrollToTop()">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+  }
   <router-outlet />
 </div>
 <app-footer></app-footer>
