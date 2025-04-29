@@ -7,4 +7,8 @@ import { PageHeaderComponent } from '../../page-header/page-header.component';
   templateUrl: './history.component.html',
   styleUrl: './history.component.scss',
 })
-export class HistoryComponent {}
+export class HistoryComponent {
+  selectSlide(arg0: number) {
+    throw new Error('Method not implemented.');
+  }
+}

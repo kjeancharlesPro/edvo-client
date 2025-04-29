@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { PageHeaderComponent } from '../../page-header/page-header.component';
 
 @Component({
   selector: 'app-mecene',
-  imports: [],
+  imports: [PageHeaderComponent],
   templateUrl: './mecene.component.html',
-  styleUrl: './mecene.component.scss'
+  styleUrl: './mecene.component.scss',
 })
-export class MeceneComponent {
-
-}
+export class MeceneComponent {}

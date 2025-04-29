@@ -15,9 +15,15 @@ import { DocsComponent } from './components/help-us/docs/docs.component';
 import { MeceneComponent } from './components/help-us/mecene/mecene.component';
 import { TestimonyComponent } from './components/about-us/testimony/testimony.component';
 import { FinanceComponent } from './components/about-us/finance/finance.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { NewsletterComponent } from './components/newsletter/newsletter.component';
-
+import { ContactComponent } from './components/header/contact/contact.component';
+import { NewsletterComponent } from './components/header/newsletter/newsletter.component';
+import { GroupeEntraideFamilleComponent } from './components/our-actions/groupe-entraide-famille/groupe-entraide-famille.component';
+import { MaisonRelaisComponent } from './components/our-actions/maison-relais/maison-relais.component';
+import { AppartementsTherapeutiquesComponent } from './components/our-actions/appartements-therapeutiques/appartements-therapeutiques.component';
+import { ScolairesComponent } from './components/prevention-and-training/scolaires/scolaires.component';
+import { ParentsComponent } from './components/prevention-and-training/parents/parents.component';
+import { EntreprisesComponent } from './components/prevention-and-training/entreprises/entreprises.component';
+import { FormationsActeursRelaisComponent } from './components/prevention-and-training/formations-acteurs-relais/formations-acteurs-relais.component';
 export const routes: Routes = [
   {
     path: '',
@@ -74,7 +80,7 @@ export const routes: Routes = [
   {
     path: 'maison-relais',
     title: 'Maison relais - Association Nation EDVO',
-    component: HouseComponent,
+    component: MaisonRelaisComponent,
   },
   {
     path: 'epicerie-sociales',
@@ -84,33 +90,33 @@ export const routes: Routes = [
   {
     path: 'appartements-therapeutiques',
     title: 'Appartements Thérapeutiques - Association Nation EDVO',
-    component: HomeComponent,
+    component: AppartementsTherapeutiquesComponent,
   },
   {
     path: 'groupe-entraide-famille',
     title: 'Groupe entraide famille - Association Nation EDVO',
-    component: HomeComponent,
+    component: GroupeEntraideFamilleComponent,
   },
   //Prévention & Formation
   {
     path: 'scolaires',
     title: 'Scolaires - Association Nation EDVO',
-    component: HomeComponent,
+    component: ScolairesComponent,
   },
   {
     path: 'parents',
     title: 'Parents - Association Nation EDVO',
-    component: HomeComponent,
+    component: ParentsComponent,
   },
   {
     path: 'entreprises',
     title: 'Entreprises - Association Nation EDVO',
-    component: HomeComponent,
+    component: EntreprisesComponent,
   },
   {
     path: 'formations-acteurs-relais',
     title: 'Formations acteurs-relais - Association Nation EDVO',
-    component: HomeComponent,
+    component: FormationsActeursRelaisComponent,
   },
   //Nous soutenir
   {

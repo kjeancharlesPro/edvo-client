@@ -1,0 +1,46 @@
+:root {
+    --h-primary-color: #fff; /* try #212121 also for dark mode */
+    --h-background-color: #212121;
+    --font: sans-serif;
+  }
+  
+  
+  body {
+    background: var(--h-background-color);
+    font-family: var(--font);
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Timeline Container */
+  .timeline {
+    background: var(--h-primary-color);
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  /* Information about the timeline */
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Title of the card */
+  .title {
+
+    position: relative;
+  }
+  
+  /* Timeline dot  */
+  .title::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    left: -39px;
+    border: 3px solid #1D4E9E
+  }
+  

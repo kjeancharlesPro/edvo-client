@@ -1,10 +1,61 @@
 <app-header></app-header>
 <div class="mb-5">
-  @if(showScrollUpButton){
+  @if(currentUrl==''){
+  <app-hero></app-hero>
+
+  } @else if("contact".match(currentUrl)) {
+  <app-page-header header="Contact"></app-page-header>
+
+  } @else if("newsletter".match(currentUrl)) {
+  <app-page-header header="Newsletter"></app-page-header>
+
+  } @else if(isInArray(aboutUs)) { @for (item of aboutUs; track $index) {
+  @if(item.url === currentUrl) {
+  <app-page-header
+    header="{{ item.header }}"
+    subheader="{{ item.subheader }}"
+    imageUrl="{{ item.imageUrl }}"
+  >
+  </app-page-header>
+  } } } @else if(isInArray(ourActions)) { @for (item of ourActions; track
+  $index) { @if(item.url === currentUrl) {
+  <app-page-header
+    header="{{ item.header }}"
+    subheader="{{ item.header }}"
+    imageUrl="{{ item.imageUrl }}"
+  >
+  </app-page-header>
+  } } } @else if(isInArray(preventionAndTraining)) { @for (item of
+  preventionAndTraining; track $index) { @if(item.url === currentUrl) {
+  <app-page-header
+    header="{{ item.header }}"
+    subheader="{{ item.subheader }}"
+    imageUrl="{{ item.imageUrl }}"
+  >
+  </app-page-header>
+  } } } @else if(isInArray(helpUs)) { @for (item of helpUs; track $index) {
+  @if(item.url === currentUrl) {
+  <app-page-header
+    header="{{ item.header }}"
+    subheader="{{ item.subheader }}"
+    imageUrl="{{ item.imageUrl }}"
+  >
+  </app-page-header>
+  } } } @else if(isInArray(ourNews)) { @for (item of ourNews; track $index) {
+  @if(item.url === currentUrl) {
+  <app-page-header
+    header="{{ item.header }}"
+    subheader="{{ item.subheader }}"
+    imageUrl="{{ item.imageUrl }}"
+  >
+  </app-page-header>
+  } } } @if(showScrollUpButton){
   <button class="scroll-up-btn btn btn-primary" (click)="scrollToTop()">
     <i class="bi bi-arrow-up"></i>
   </button>
   }
-  <router-outlet />
+  <div class="container my-5 px-4">
+    <router-outlet />
+  </div>
 </div>
 <app-footer></app-footer>

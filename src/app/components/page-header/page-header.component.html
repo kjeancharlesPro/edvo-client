@@ -1,4 +1,4 @@
-<div class="card text-bg-dark mb-3 d-flex">
+<div class="card text-bg-dark d-flex">
   <img
     src="{{ imageUrl }}"
     style="filter: brightness(50%); object-fit: cover"
@@ -6,12 +6,7 @@
     height="200"
   />
   <div class="card-img-overlay p-5">
-    <h1 class="card-title fs-1">{{ header }}</h1>
-    <div>
-      <p class="card-text">{{ subheader }}</p>
-      <p class="card-text">
-        <small>...</small>
-      </p>
-    </div>
+    <h1 class="card-title">{{ subheader }}</h1>
+    <h2 class="card-subtitle fs-6">{{ header }}</h2>
   </div>
 </div>
