@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-maison-relais',
   imports: [],
   templateUrl: './maison-relais.component.html',
-  styleUrl: './maison-relais.component.scss'
+  styleUrl: './maison-relais.component.scss',
 })
-export class MaisonRelaisComponent {
-
-}
+export class MaisonRelaisComponent {}
