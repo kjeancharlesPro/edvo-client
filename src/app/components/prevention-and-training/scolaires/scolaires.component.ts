@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
+import { Cm2Component } from './cm2/cm2.component';
+import { CyberAddictionsComponent } from './cyber-addictions/cyber-addictions.component';
 
 @Component({
   selector: 'app-scolaires',
-  imports: [],
+  imports: [Cm2Component, CyberAddictionsComponent],
   templateUrl: './scolaires.component.html',
-  styleUrl: './scolaires.component.scss'
+  styleUrl: './scolaires.component.scss',
 })
-export class ScolairesComponent {
-
-}
+export class ScolairesComponent {}
