@@ -55,21 +55,33 @@
   </li>
 </ul>
 <p class="fw-bold">Nos préventions concernent les différents secteurs:</p>
+
+<!--cm2 cyberAddiction ecoute victimes formation-->
 <ol class="list-group list-group-numbered mb-3">
-  <a href="#cm2" class="list-group-item list-group-item-action"
+  <a
+    (click)="scrollToSection('cm2')"
+    class="list-group-item list-group-item-action"
     >Pour les élèves de CM2</a
   >
-  <a href="#cyberAddiction" class="list-group-item list-group-item-action"
+  <a
+    (click)="scrollToSection('cyberAddiction')"
+    class="list-group-item list-group-item-action"
     >Pour la prévention sur les cyber-addictions</a
   >
-  <a href="#ecoute" class="list-group-item list-group-item-action"
+  <a
+    (click)="scrollToSection('ecoute')"
+    class="list-group-item list-group-item-action"
     >Point écoute Parents/Adolescents</a
   >
-  <a href="#addiction" class="list-group-item list-group-item-action"
+  <a
+    (click)="scrollToSection('victimes')"
+    class="list-group-item list-group-item-action"
     >Pour les victimes d’addiction : écoute, suivi ambulatoire, orientation sur
     les soins chez nos partenaires</a
   >
-  <a href="#formation" class="list-group-item list-group-item-action"
+  <a
+    (click)="scrollToSection('formation')"
+    class="list-group-item list-group-item-action"
     >Formation</a
   >
   <a
@@ -85,6 +97,7 @@
 <div id="cyberAddiction">
   <app-cyber-addictions></app-cyber-addictions>
 </div>
+
 <div id="ecoute">
   <h4>Point écoute Parents/Adolescents</h4>
   <p class="fw-bold">

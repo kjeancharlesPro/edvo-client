@@ -8,4 +8,11 @@ import { CyberAddictionsComponent } from './cyber-addictions/cyber-addictions.co
   templateUrl: './scolaires.component.html',
   styleUrl: './scolaires.component.scss',
 })
-export class ScolairesComponent {}
+export class ScolairesComponent {
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+}
