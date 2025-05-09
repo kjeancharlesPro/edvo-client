@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { PageHeaderItem } from './models/PageHeaderItem';
 import { aboutUs } from './constants/aboutUs';
 import { ourActions } from './constants/ourActions';
+import { GoogleMapsModule } from '@angular/google-maps';
 import { preventionAndTraining } from './constants/preventionAndTraining';
 import { helpUs } from './constants/helpUs';
 import { ourNews } from './constants/ourNews';
@@ -21,6 +22,7 @@ import { ourNews } from './constants/ourNews';
     FooterComponent,
     PageHeaderComponent,
     HeroComponent,
+    GoogleMapsModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -33,6 +35,7 @@ export class AppComponent {
   preventionAndTraining: PageHeaderItem[];
   helpUs: PageHeaderItem[];
   ourNews: PageHeaderItem[];
+  center: google.maps.LatLngLiteral = { lat: 23.0225, lng: 72.5714 };
 
   constructor(private router: Router) {
     this.aboutUs = aboutUs;
