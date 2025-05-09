@@ -4,10 +4,18 @@
   <app-hero></app-hero>
 
   } @else if("contact".match(currentUrl)) {
-  <app-page-header header="Contact"></app-page-header>
+  <app-page-header
+    header="Addiction - Prévention - Accompagnement - Précarité"
+    subheader="Contact"
+    imageUrl="sticky-notes.jpg"
+  ></app-page-header>
 
   } @else if("newsletter".match(currentUrl)) {
-  <app-page-header header="Newsletter"></app-page-header>
+  <app-page-header
+    header="Addiction - Prévention - Accompagnement - Précarité"
+    subheader="Newsletter"
+    imageUrl="newspaper.jpg"
+  ></app-page-header>
 
   } @else if(isInArray(aboutUs)) { @for (item of aboutUs; track $index) {
   @if(item.url === currentUrl) {

@@ -145,13 +145,8 @@
       D’autres témoignent…
     </h3>
     <div class="d-flex justify-content-center">
-      <video width="600" controls>
-        <source
-          src="https://www.youtube.com/watch?v=GKsN-ACyUZk&t=3s"
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video>
+      <script src="https://www.youtube.com/iframe_api"></script>
+      <youtube-player [videoId]="videoId"> </youtube-player>
     </div>
   </section>
   <div class="p-2">

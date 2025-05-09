@@ -6,6 +6,6 @@ export const ourNews = [
     'actualites',
     'Nos actualités',
     'Actualités',
-    'https://edvo.fr/wp-content/uploads/2018/09/EDVO-Salle-a-manger-1024x768.jpg'
+    'https://edvo.fr/wp-content/uploads/2018/07/IMG_0188.jpg'
   ),
 ];
