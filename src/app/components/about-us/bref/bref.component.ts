@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { PageHeaderComponent } from '../../page-header/page-header.component';
 
 @Component({
   selector: 'app-bref',
-  imports: [PageHeaderComponent],
+  imports: [],
   templateUrl: './bref.component.html',
   styleUrl: './bref.component.scss',
 })

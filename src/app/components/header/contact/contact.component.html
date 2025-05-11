@@ -1,106 +1,124 @@
 <div class="container">
   <div class="row">
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-8">
       <h4 class="border-bottom border-secondary-subtle border-5 d-inline-flex">
         Formulaire de contact
       </h4>
-      <form class="border rounded border-1 p-5">
+      <form
+        [formGroup]="contactForm"
+        (submit)="onSubmit()"
+        class="border rounded border-1 p-5"
+      >
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">
-            Objet de la demande (obligatoire)
+          <label for="demande" class="form-label">
+            Objet de la demande<span class="text-danger">*</span>
           </label>
-          <select class="form-select" aria-label="Default select example">
-            <option value="Informations">Informations</option>
-            <option value="Groupe entraide famille">
-              Groupe entraide famille
+          <select
+            id="demande"
+            class="form-select"
+            formControlName="demande"
+            aria-label="Objet de la demande"
+          >
+            @for (object of objectOfDemand; track object.id) {
+            <option value="{{ object.value }}">
+              {{ object.value }}
             </option>
-            <option value="Prévention scolaire">Prévention scolaire</option>
-            <option value="Prévention entreprise">Prévention entreprise</option>
-            <option value="Formation acteur-relais">
-              Formation acteur-relais
-            </option>
-            <option value="Faire un leg">Faire un leg</option>
-            <option value="Devenir adhérent">Devenir adhérent</option>
-            <option value="Devenir bénévole">Devenir bénévole</option>
-            <option value="Presse">Presse</option>
-            <option value="Maison Relais">Maison Relais</option>
-            <option value="Autre">Autre</option>
+            }
           </select>
         </div>
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
-            Votre nom (obligatoire)
+          <label for="name" class="form-label">
+            Nom<span class="text-danger">*</span>
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            formControlName="name"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="organism" class="form-label">Organisme</label>
+          <input
+            type="text"
+            class="form-control"
+            id="organism"
+            formControlName="organism"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">
+            Email<span class="text-danger">*</span>
           </label>
           <input
             type="email"
             class="form-control"
-            id="exampleFormControlInput1"
-            placeholder="name@example.com"
+            id="email"
+            formControlName="email"
           />
         </div>
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
-            Votre organisme (facultatif)
-          </label>
-          <input
-            type="email"
-            class="form-control"
-            id="exampleFormControlInput1"
-            placeholder="Votre organisme (facultatif)"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
-            Votre adresse de messagerie (obligatoire)
-          </label>
-          <input
-            type="email"
-            class="form-control"
-            id="exampleFormControlInput1"
-            placeholder="email"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">
-            Votre message
-          </label>
+          <label for="message" class="form-label"
+            >Message<span class="text-danger">*</span></label
+          >
           <textarea
+            type="text"
             class="form-control"
-            id="exampleFormControlTextarea1"
             rows="3"
-            placeholder="Votre message"
+            formControlName="message"
           >
           </textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Envoyer</button>
+        <button
+          type="submit"
+          [disabled]="!contactForm.valid"
+          class="btn btn-primary"
+        >
+          Envoyer
+        </button>
       </form>
     </div>
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-4">
       <h4 class="border-bottom border-secondary-subtle border-5 d-inline-flex">
         Information rapide
       </h4>
       <ul class="list-group">
         <li class="list-group-item list-group-item-primary">Hotel Social :</li>
-        <a href="#" class="list-group-item list-group-item-action">
+        <a
+          href="mailto:secretariat@edvo.fr"
+          class="list-group-item list-group-item-action"
+        >
           secretariat&#64;edvo.fr
         </a>
-        <a href="#" class="list-group-item list-group-item-action">
+        <a href="tel:0134286450" class="list-group-item list-group-item-action">
           01 34 28 64 50
         </a>
         <li class="list-group-item list-group-item-primary">Maison Relais :</li>
-        <a href="#" class="list-group-item list-group-item-action">
+        <a
+          href="mailto:maisonrelais@edvo.fr"
+          class="list-group-item list-group-item-action"
+        >
           maisonrelais&#64;edvo.fr
         </a>
         <li class="list-group-item list-group-item-primary">Prévention :</li>
-        <a href="#" class="list-group-item list-group-item-action">
+        <a
+          href="mailto:secretariat@edvo.fr"
+          class="list-group-item list-group-item-action"
+        >
           secretariat&#64;edvo.fr
         </a>
         <li class="list-group-item list-group-item-primary">Presse :</li>
-        <a href="#" class="list-group-item list-group-item-action">
+        <a
+          href="mailto:secretariat@edvo.fr"
+          class="list-group-item list-group-item-action"
+        >
           secretariat&#64;edvo.fr
         </a>
         <li class="list-group-item list-group-item-primary">Nous soutenir :</li>
-        <a href="#" class="list-group-item list-group-item-action">
+        <a
+          href="mailto:secretariat@edvo.fr"
+          class="list-group-item list-group-item-action"
+        >
           secretariat&#64;edvo.fr
         </a>
       </ul>

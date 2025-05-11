@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { PageHeaderComponent } from '../../page-header/page-header.component';
 
 @Component({
   selector: 'app-finance',
-  imports: [PageHeaderComponent],
+  imports: [],
   templateUrl: './finance.component.html',
   styleUrl: './finance.component.scss',
 })
