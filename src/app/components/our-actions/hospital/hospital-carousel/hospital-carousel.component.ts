@@ -1,13 +1,12 @@
-import { Component } from '@angular/core';
-import { HospitalCarouselComponent } from './hospital-carousel/hospital-carousel.component';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-hospital',
-  imports: [HospitalCarouselComponent],
-  templateUrl: './hospital.component.html',
-  styleUrl: './hospital.component.scss',
+  selector: 'app-hospital-carousel',
+  imports: [],
+  templateUrl: './hospital-carousel.component.html',
+  styleUrl: './hospital-carousel.component.scss',
 })
-export class HospitalComponent {
+export class HospitalCarouselComponent {
   images = [
     {
       id: 0,
@@ -50,4 +49,8 @@ export class HospitalComponent {
       alt: 'EDVO-Paneaux',
     },
   ];
+
+  @Input() scr = '';
+  @Input() alt = '';
+  @Input() id = 0;
 }

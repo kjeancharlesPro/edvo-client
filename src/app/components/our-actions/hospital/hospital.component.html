@@ -1,9 +1,14 @@
 <h3 class="border-bottom border-secondary-subtle border-5 d-inline-flex">
   Hôtel social
 </h3>
+
 <p>
   L’hôtel social de l’EDVO est une structure d’accueil situé au
-  <a href="">4 Rue Gallieni, 95360 Montmagny.</a>
+  <a
+    target="_blank"
+    href="https://www.google.fr/maps/place/Association+Nationale+EDVO/@48.9734902,2.3467222,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6690bdc2b02b1:0xaec06c19d2dd7f2d!8m2!3d48.9734902!4d2.3489109"
+    >4 Rue Gallieni, 95360 Montmagny.</a
+  >
 </p>
 <p>
   Cet accueil s’adresse à toute personne victime d’addictions, souhaitant se
@@ -11,17 +16,31 @@
   modifiant le comportement. C’est une méthode de prise en charge globale.
 </p>
 <p>
-  Nous proposons un accompagnement pluridisciplinaire d’1 an s’appuyant sur une
-  dynamique de groupe spécifique et une thérapie par l’entraide (modèle
-  Minnesota), visant le rétablissement et la réinsertion sociale par étapes avec
-  accès à une autonomie durable.
+  Nous proposons un accompagnement pluridisciplinaire d’1
+  <span class="my-tooltip my-tooltip bg-primary text-light text-center"
+    >?
+    <span class="my-tooltiptext p-1 bg-primary"
+      >6 mois renouvelable une fois</span
+    >
+  </span>
+  an s’appuyant sur une dynamique de groupe spécifique et une thérapie par
+  l’entraide (modèle Minnesota), visant le rétablissement et la réinsertion
+  sociale par étapes avec accès à une autonomie durable.
 </p>
 <p class="fw-bold">L’équipe de l’EDVO est composée de la manière suivante :</p>
 <ul class="list-group mb-3">
   <li class="list-group-item list-group-item-secondary">
     le responsable de l’EDVO
   </li>
-  <li class="list-group-item list-group-item-secondary">a CESF</li>
+  <li class="list-group-item list-group-item-secondary">
+    a CESF
+    <span class="my-tooltip my-tooltip bg-primary text-light text-center"
+      >?
+      <span class="my-tooltiptext p-1 bg-primary"
+        >Conseiller en Economie Social et Familiale</span
+      >
+    </span>
+  </li>
   <li class="list-group-item list-group-item-secondary">3 thérapeutes</li>
   <li class="list-group-item list-group-item-secondary">
     la maîtresse de maison
@@ -51,78 +70,11 @@
   entretien préalable avec notre équipe.
 </p>
 <div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col">
-    <img
-      src="https://edvo.fr/wp-content/uploads/2018/09/EDVO-Salle-a-manger.jpg"
-      class="card-img-top border rounded"
-      alt="EDVO-Salle-a-manger"
-      style="object-fit: cover"
-      height="300"
-    />
-  </div>
-  <div class="col">
-    <img
-      src="https://edvo.fr/wp-content/uploads/2018/09/EDVO-Salle-GT-2-1.jpg"
-      class="card-img-top border rounded"
-      alt="EDVO-Salle-GT-2-1"
-      style="object-fit: cover"
-      height="300"
-    />
-  </div>
-  <div class="col">
-    <img
-      src="https://edvo.fr/wp-content/uploads/2018/09/EDVO-Groupe-accueil-2.jpg"
-      class="card-img-top border rounded"
-      alt="EDVO-Groupe-accueil-2"
-      style="object-fit: cover"
-      height="300"
-    />
-  </div>
-
-  <div class="col">
-    <img
-      src="https://edvo.fr/wp-content/uploads/2018/09/EDVO-Couloir-2.jpg"
-      class="card-img-top border rounded"
-      alt="EDVO-Couloir-2"
-      style="object-fit: cover"
-      height="300"
-    />
-  </div>
-  <div class="col">
-    <img
-      src="https://edvo.fr/wp-content/uploads/2018/09/EDVO-Salle-TV-3.jpg"
-      class="card-img-top border rounded"
-      alt="EDVO-Salle-TV-3"
-      style="object-fit: cover"
-      height="300"
-    />
-  </div>
-  <div class="col">
-    <img
-      src="https://edvo.fr/wp-content/uploads/2018/09/EDVO-Chambre.jpg"
-      class="card-img-top border rounded"
-      alt="EDVO-Chambre"
-      style="object-fit: cover"
-      height="300"
-    />
-  </div>
-
-  <div class="col">
-    <img
-      src="https://edvo.fr/wp-content/uploads/2018/09/EDVO-Salle-TV.jpg"
-      class="card-img-top border rounded"
-      alt="EDVO-Salle-TV"
-      style="object-fit: cover"
-      height="300"
-    />
-  </div>
-  <div class="col">
-    <img
-      src="https://edvo.fr/wp-content/uploads/2018/09/EDVO-Paneaux.jpg"
-      class="card-img-top border rounded"
-      alt="EDVO-Paneaux"
-      style="object-fit: cover"
-      height="300"
-    />
-  </div>
+  @for (image of images; track $index) {
+  <app-hospital-carousel
+    [scr]="image.src"
+    [alt]="image.alt"
+    [id]="image.id"
+  ></app-hospital-carousel>
+  }
 </div>

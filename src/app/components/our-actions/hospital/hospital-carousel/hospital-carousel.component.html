@@ -1,0 +1,70 @@
+<div class="col">
+  <img
+    data-bs-toggle="modal"
+    [attr.data-bs-target]="'#' + id"
+    [src]="scr"
+    class="card-img-top border rounded"
+    [alt]="alt"
+    style="object-fit: cover; cursor: pointer"
+    height="300"
+  />
+  <div
+    class="modal fade"
+    id="{{ id }}"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-lg" id="{{ id }}">
+      <div class="modal-content" id="{{ id }}">
+        <div class="modal-header">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              @for (image of images; track $index) {
+              <div class="carousel-item {{ id === image.id && 'active' }}">
+                <img
+                  class="d-block w-100 border rounded"
+                  [src]="image.src"
+                  [alt]="image.alt"
+                />
+              </div>
+              }
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
