@@ -9,7 +9,7 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
 })
 export class TestimonyComponent {
   apiLoaded = false;
-  videoId = '-Zx6SE-rY-I';
+  videoId = 'GKsN-ACyUZk';
 
   ngOnInit() {
     if (!this.apiLoaded) {
