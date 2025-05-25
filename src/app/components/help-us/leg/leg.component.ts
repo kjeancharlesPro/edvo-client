@@ -108,23 +108,19 @@ export class LegComponent {
     this.options.forEach((option) =>
       this.checkboxes.setControl(option.id, option.value)
     );
+    this.checkboxes.addValidators(this.checkboxesValidator());
   }
 
   get checkboxes(): FormArray {
     return this.legForm.get('types') as FormArray;
   }
 
-  atLeastOneCheckBoxIsTrueValidator(): ValidatorFn {
+  checkboxesValidator(): ValidatorFn {
     return (control: AbstractControl): ValidationErrors | null => {
-      const value = control.value;
-      if (this.checkboxes.value.some((v: boolean) => v === true)) {
-        return {
-          usernameTooShort: {
-            isValid: value,
-          },
-        };
-      }
-      return null;
+      const hasSome = this.checkboxes.value.some((v: boolean) => v === true);
+      console.log(this.legForm);
+
+      return hasSome ? null : { checkboxes: { value: control.value } };
     };
   }
 

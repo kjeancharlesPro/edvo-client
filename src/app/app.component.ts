@@ -48,14 +48,12 @@ export class AppComponent {
   ngOnInit(): void {
     this.currentUrl = this.router.url;
     this.removeLeadingSlash();
-    console.log('URL actuelle :', this.currentUrl);
     //trouver l'item correspondant à l'url actuelle dans le tableau
 
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.currentUrl = event.urlAfterRedirects;
         this.removeLeadingSlash(); // Remove leading slash
-        console.log('URL actuelle :', this.currentUrl);
       }
     });
   }
