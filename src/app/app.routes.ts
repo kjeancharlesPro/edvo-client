@@ -8,7 +8,6 @@ import { SoinsComponent } from './components/about-us/soins/soins.component';
 import { LegComponent } from './components/help-us/leg/leg.component';
 import { DonComponent } from './components/help-us/don/don.component';
 import { GroceryComponent } from './components/our-actions/grocery/grocery.component';
-import { HouseComponent } from './components/our-actions/house/house.component';
 import { HospitalComponent } from './components/our-actions/hospital/hospital.component';
 import { BenevolComponent } from './components/help-us/benevol/benevol.component';
 import { DocsComponent } from './components/help-us/docs/docs.component';
@@ -24,7 +23,6 @@ import { ScolairesComponent } from './components/prevention-and-training/scolair
 import { ParentsComponent } from './components/prevention-and-training/parents/parents.component';
 import { EntreprisesComponent } from './components/prevention-and-training/entreprises/entreprises.component';
 import { FormationsActeursRelaisComponent } from './components/prevention-and-training/formations-acteurs-relais/formations-acteurs-relais.component';
-import { NotFoundComponent } from './components/not-found/not-found.component';
 export const routes: Routes = [
   {
     path: '',
@@ -152,5 +150,5 @@ export const routes: Routes = [
     title: 'Actualités - Association Nation EDVO',
     component: OurNewsComponent,
   },
-  { path: '**', component: NotFoundComponent },
+  { path: '**', component: HomeComponent },
 ];

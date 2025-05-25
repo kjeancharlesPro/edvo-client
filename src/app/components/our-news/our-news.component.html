@@ -3,18 +3,72 @@
     A la une!
   </h3>
 </section>
-<app-search-bar></app-search-bar>
-<app-articles></app-articles>
-<section>
-  <div class="d-flex d-flex justify-content-center align-items-center">
-    <nav aria-label="Page navigation example">
-      <ul class="pagination">
-        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-      </ul>
-    </nav>
+<section class="container">
+  <div class="row g-3">
+    <div class="col col-lg-3">
+      @for(data of articleData; track $index){ @if($index < 4){
+      <div class="card my-3">
+        @if(data.image){
+        <img [src]="data.image" class="card-img-top" alt="..." />
+        }
+        <div class="card-body">
+          <h6 class="card-title text-primary">{{ data.title }}</h6>
+          @if(data.text){
+          <p class="card-text">{{ data.text }}</p>
+          }
+          <a class="btn btn-primary">Lire l'article</a>
+          <a [routerLink]="['/actualites', data.id]">Learn More</a>
+        </div>
+      </div>
+      }}
+    </div>
+    <div class="col col-lg-3">
+      @for(data of articleData; track $index){ @if(3 < $index && $index < 8){
+      <div class="card my-3">
+        @if(data.image){
+        <img [src]="data.image" class="card-img-top" alt="..." />
+        }
+        <div class="card-body">
+          <h6 class="card-title text-primary">{{ data.title }}</h6>
+          @if(data.text){
+          <p class="card-text">{{ data.text }}</p>
+          }
+          <a href="#" class="btn btn-primary">Lire l'article</a>
+        </div>
+      </div>
+      }}
+    </div>
+    <div class="col col-lg-3">
+      @for(data of articleData; track $index){ @if(7 < $index && $index < 12){
+      <div class="card my-3">
+        @if(data.image){
+        <img [src]="data.image" class="card-img-top" alt="..." />
+        }
+        <div class="card-body">
+          <h6 class="card-title text-primary">{{ data.title }}</h6>
+          @if(data.text){
+          <p class="card-text">{{ data.text }}</p>
+          }
+          <a href="#" class="btn btn-primary">Lire l'article</a>
+        </div>
+      </div>
+      }}
+    </div>
+    <div class="col col-lg-3">
+      @for(data of articleData; track $index){ @if( $index > 11){
+      <div class="card my-3">
+        @if(data.image){
+        <img [src]="data.image" class="card-img-top" alt="..." />
+        }
+        <div class="card-body">
+          <h6 class="card-title text-primary">{{ data.title }}</h6>
+          @if(data.text){
+          <p class="card-text">{{ data.text }}</p>
+          }
+          <a href="#" class="btn btn-primary">Lire l'article</a>
+        </div>
+      </div>
+      }}
+    </div>
   </div>
 </section>
