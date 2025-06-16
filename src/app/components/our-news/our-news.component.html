@@ -6,66 +6,73 @@
 <section class="container">
   <div class="row g-3">
     <div class="col col-lg-3">
-      @for(data of articleData; track $index){ @if($index < 4){
+      @for(article of articles; track $index){ @if($index < 4){
       <div class="card my-3">
-        @if(data.image){
-        <img [src]="data.image" class="card-img-top" alt="..." />
+        @if(article.image){
+        <img [src]="article.image" class="card-img-top" alt="..." />
         }
         <div class="card-body">
-          <h6 class="card-title text-primary">{{ data.title }}</h6>
-          @if(data.text){
-          <p class="card-text">{{ data.text }}</p>
+          <h6 class="card-title text-primary">{{ article.title }}</h6>
+          @if(article.text){
+          <p class="card-text">{{ article.text }}</p>
           }
-          <a class="btn btn-primary">Lire l'article</a>
-          <a [routerLink]="['/actualites', data.id]">Learn More</a>
+          <a [routerLink]="['/actualites', article.id]" class="btn btn-primary">
+            Lire l'article
+          </a>
         </div>
       </div>
       }}
     </div>
     <div class="col col-lg-3">
-      @for(data of articleData; track $index){ @if(3 < $index && $index < 8){
+      @for(article of articles; track $index){ @if(3 < $index && $index < 8){
       <div class="card my-3">
-        @if(data.image){
-        <img [src]="data.image" class="card-img-top" alt="..." />
+        @if(article.image){
+        <img [src]="article.image" class="card-img-top" alt="..." />
         }
         <div class="card-body">
-          <h6 class="card-title text-primary">{{ data.title }}</h6>
-          @if(data.text){
-          <p class="card-text">{{ data.text }}</p>
+          <h6 class="card-title text-primary">{{ article.title }}</h6>
+          @if(article.text){
+          <p class="card-text">{{ article.text }}</p>
           }
-          <a href="#" class="btn btn-primary">Lire l'article</a>
+          <a [routerLink]="['/actualites', article.id]" class="btn btn-primary">
+            Lire l'article
+          </a>
         </div>
       </div>
       }}
     </div>
     <div class="col col-lg-3">
-      @for(data of articleData; track $index){ @if(7 < $index && $index < 12){
+      @for(article of articles; track $index){ @if(7 < $index && $index < 12){
       <div class="card my-3">
-        @if(data.image){
-        <img [src]="data.image" class="card-img-top" alt="..." />
+        @if(article.image){
+        <img [src]="article.image" class="card-img-top" alt="..." />
         }
         <div class="card-body">
-          <h6 class="card-title text-primary">{{ data.title }}</h6>
-          @if(data.text){
-          <p class="card-text">{{ data.text }}</p>
+          <h6 class="card-title text-primary">{{ article.title }}</h6>
+          @if(article.text){
+          <p class="card-text">{{ article.text }}</p>
           }
-          <a href="#" class="btn btn-primary">Lire l'article</a>
+          <a [routerLink]="['/actualites', article.id]" class="btn btn-primary">
+            Lire l'article
+          </a>
         </div>
       </div>
       }}
     </div>
     <div class="col col-lg-3">
-      @for(data of articleData; track $index){ @if( $index > 11){
+      @for(article of articles; track $index){ @if( $index > 11){
       <div class="card my-3">
-        @if(data.image){
-        <img [src]="data.image" class="card-img-top" alt="..." />
+        @if(article.image){
+        <img [src]="article.image" class="card-img-top" alt="..." />
         }
         <div class="card-body">
-          <h6 class="card-title text-primary">{{ data.title }}</h6>
-          @if(data.text){
-          <p class="card-text">{{ data.text }}</p>
+          <h6 class="card-title text-primary">{{ article.title }}</h6>
+          @if(article.text){
+          <p class="card-text">{{ article.text }}</p>
           }
-          <a href="#" class="btn btn-primary">Lire l'article</a>
+          <a [routerLink]="['/actualites', article.id]" class="btn btn-primary">
+            Lire l'article
+          </a>
         </div>
       </div>
       }}

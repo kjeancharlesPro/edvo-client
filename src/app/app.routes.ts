@@ -23,6 +23,7 @@ import { ScolairesComponent } from './components/prevention-and-training/scolair
 import { ParentsComponent } from './components/prevention-and-training/parents/parents.component';
 import { EntreprisesComponent } from './components/prevention-and-training/entreprises/entreprises.component';
 import { FormationsActeursRelaisComponent } from './components/prevention-and-training/formations-acteurs-relais/formations-acteurs-relais.component';
+import { OurNewsDetailComponent } from './components/our-news/our-news-detail/our-news-detail.component';
 export const routes: Routes = [
   {
     path: '',
@@ -150,5 +151,6 @@ export const routes: Routes = [
     title: 'Actualités - Association Nation EDVO',
     component: OurNewsComponent,
   },
+  { path: 'actualites/:id', component: OurNewsDetailComponent },
   { path: '**', component: HomeComponent },
 ];

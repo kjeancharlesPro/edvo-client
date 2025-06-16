@@ -5,10 +5,11 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { GoogleMapComponent } from '../google-map/google-map.component';
 
 @Component({
   selector: 'app-contact',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, GoogleMapComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })

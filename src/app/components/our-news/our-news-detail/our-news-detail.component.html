@@ -1,0 +1,42 @@
+<h4>{{ article.title }}</h4>
+
+<div class="hstack gap-3 mb-3">
+  <div class="p-2">
+    <p class="card-text">
+      <span class="fw-bold">Publié le </span>
+      | <i class="bi bi-clock"></i> {{ article.publishedDate }}
+    </p>
+  </div>
+  <div class="p-2 ms-auto">
+    <p class="card-text">
+      <span class="fw-bold">
+        <i class="bi bi-share-fill"></i> Partager via :
+      </span>
+    </p>
+    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+      <a
+        type="button"
+        class="btn btn-primary"
+        href="https://twitter.com/intent/tweet?text={{ article.title }}&url={{
+          article.url
+        }}"
+        target="_blank"
+      >
+        <i class="bi bi-facebook"></i>
+      </a>
+      <a type="button" class="btn btn-warning">
+        <i class="bi bi-messenger"></i>
+      </a>
+      <a type="button" class="btn btn-danger">
+        <i class="bi bi-envelope-fill"></i>
+      </a>
+    </div>
+  </div>
+</div>
+@if(article.image){
+<img [src]="article.image" class="card-img-top" alt="..." />
+}
+<div class="card-body">
+  <p class="card-text">{{ article.content }}</p>
+  <!-- <button class="btn btn-primary" (click)="goBack()">Go Back</button> -->
+</div>

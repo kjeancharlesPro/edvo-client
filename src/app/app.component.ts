@@ -1,11 +1,10 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PageHeaderComponent } from './components/page-header/page-header.component';
 import { Router, NavigationEnd } from '@angular/router';
 import { HeroComponent } from './components/home/hero/hero.component';
-import { HomeComponent } from './components/home/home.component';
 import { PageHeaderItem } from './models/PageHeaderItem';
 import { aboutUs } from './constants/aboutUs';
 import { ourActions } from './constants/ourActions';
@@ -26,8 +25,12 @@ import { ourNews } from './constants/ourNews';
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppComponent {
+  openInfoWindow() {
+    throw new Error('Method not implemented.');
+  }
   showScrollUpButton = false;
   currentUrl: string = '';
   aboutUs: PageHeaderItem[];
@@ -35,7 +38,6 @@ export class AppComponent {
   preventionAndTraining: PageHeaderItem[];
   helpUs: PageHeaderItem[];
   ourNews: PageHeaderItem[];
-  center: google.maps.LatLngLiteral = { lat: 23.0225, lng: 72.5714 };
 
   constructor(private router: Router) {
     this.aboutUs = aboutUs;
