@@ -6,12 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
 })
-export class HeroComponent {
-  counter = 0;
-  intervalId: NodeJS.Timeout | undefined;
-  ngOnInit() {
-    this.intervalId = setInterval(() => {
-      this.counter++;
-    }, 1000);
-  }
-}
+export class HeroComponent {}
